@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - SyammStoreID</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --c1: #1B2062;
+      --c2: #6728CE;
+      --c3: #B67ED7;
+      --c4: #E6B1F5;
+      --bg-dark: #0b0b0b;
+      --text: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text);
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 240px;
+      background: linear-gradient(to bottom, var(--c4), var(--c3), var(--c2), var(--c1));
+      padding: 20px;
+      transition: 0.3s;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 18px;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar ul li a:hover {
+      transform: translateX(8px);
+      font-weight: 600;
+    }
+
+    /* Toggle Button */
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: var(--c2);
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+      font-size: 18px;
+    }
+
+    /* Main Content */
+    .main {
+      margin-left: 240px;
+      padding: 40px 20px;
+      flex: 1;
+      transition: 0.3s;
+    }
+
+    .about {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #181828;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .about h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      background: linear-gradient(to right, var(--c4), var(--c2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: #d1d1d1;
+    }
+
+    .about ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    .about ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        left: -240px;
+      }
+      .sidebar.active {
+        left: 0;
+      }
+      .main {
+        margin-left: 0;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <button class="menu-toggle">☰</button>
+  <div class="sidebar">
+    <h2>SyammStoreID</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="tfo">Thanks For Order</a></li>
+     <li><a href="https://whatsapp.com/channel/0029VbBTefC3gvWjFQU6Ew0g" target="_blank">Contact</a></li>
+      <li><a href="media">Media Sosial</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="about">
+      <h1>Tentang SyammStoreID</h1>
+      <p>
+        SyammStoreID adalah tempat khusus untuk kalian yang ingin tampil beda di dunia Minecraft.
+        Kami menyediakan skin eksklusif, custom sesuai permintaan, dan pastinya original ✨
+      </p>
+      <p>
+        Sejak awal berdiri, kami berfokus untuk memberikan desain yang detail, rapi, dan sesuai
+        karakter pemain. Dengan harga yang terjangkau, setiap skin bisa jadi identitas unik kalian.
+      </p>
+      <p><strong>Apa yang kami tawarkan:</strong></p>
+      <ul>
+        <li>🎨 Custom Skin sesuai request</li>
+        <li>💕 Skin Couple untuk pasangan</li>
+        <li>🔄 Remake / Reshade dari skin lama</li>
+      </ul>
+      <p>
+        Kami percaya bahwa skin bukan sekadar tampilan, tapi juga cara untuk mengekspresikan diri di dalam game.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

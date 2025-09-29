@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Sosial - SyammStoreID</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --c1: #1B2062;
+      --c2: #6728CE;
+      --c3: #B67ED7;
+      --c4: #E6B1F5;
+      --bg-dark: #0b0b0b;
+      --text: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text);
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 240px;
+      background: linear-gradient(to bottom, var(--c4), var(--c3), var(--c2), var(--c1));
+      padding: 20px;
+      transition: 0.3s;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 18px;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar ul li a:hover {
+      transform: translateX(8px);
+      font-weight: 600;
+    }
+
+    /* Toggle Button */
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: var(--c2);
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+      font-size: 18px;
+    }
+
+    /* Main Content */
+    .main {
+      margin-left: 240px;
+      padding: 40px 20px;
+      flex: 1;
+      transition: 0.3s;
+    }
+
+    .media {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .media h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+      background: linear-gradient(to right, var(--c4), var(--c2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #121212;
+      border-radius: 12px;
+      text-align: center;
+      padding: 25px 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 10px 18px;
+      margin-top: 8px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .yt { background: #FF0000; }
+    .yt:hover { background: #cc0000; }
+
+    .tt { background: #000000; }
+    .tt:hover { background: #202020; }
+
+    .ig { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+    .ig:hover { opacity: 0.8; }
+
+    .wa { background: #25D366; }
+    .wa:hover { background: #1da851; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        left: -240px;
+      }
+      .sidebar.active {
+        left: 0;
+      }
+      .main {
+        margin-left: 0;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <button class="menu-toggle">☰</button>
+  <div class="sidebar">
+    <h2>SyammStoreID</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="tfo.html">Thanks For Order</a></li>
+      <li><a href="media.html">Media Sosial</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="media">
+      <h1>Media Sosial Kami</h1>
+      <div class="gallery">
+        <div class="card">
+          <img src="Youtube-logo.png" alt="YouTube">
+          <h3>YouTube</h3>
+          <a href="https://www.youtube.com/@SyammStore_ID" target="_blank" class="yt">Subscribe</a>
+        </div>
+        <div class="card">
+          <img src="tiktok-logo.webp" alt="TikTok">
+          <h3>TikTok</h3>
+          <a href="http://tiktok.com/@syammstore_id" target="_blank" class="tt">Follow</a>
+        </div>
+        <div class="card">
+          <img src="Instagram-logo.png" alt="Instagram">
+          <h3>Instagram</h3>
+          <a href="https://www.instagram.com/syammstore_id?igsh=MWpneW5oa2dxa3Z0aQ==" target="_blank" class="ig">Follow</a>
+        </div>
+        <div class="card">
+          <img src="WhatsApp-logo.webp" alt="WhatsApp">
+          <h3>WhatsApp</h3>
+          <a href="https://whatsapp.com/channel/0029VbBTefC3gvWjFQU6Ew0g" target="_blank" class="wa">Join</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
