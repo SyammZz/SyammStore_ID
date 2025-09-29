@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyammStoreID</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --c1: #1B2062;
+      --c2: #6728CE;
+      --c3: #B67ED7;
+      --c4: #E6B1F5;
+      --bg-dark: #0b0b0b;
+      --text: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text);
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 240px;
+      background: linear-gradient(to bottom, var(--c4), var(--c3), var(--c2), var(--c1));
+      padding: 20px;
+      transition: 0.3s;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 18px;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar ul li a:hover {
+      transform: translateX(8px);
+      font-weight: 600;
+    }
+
+    /* Toggle Button */
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: var(--c2);
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+      font-size: 18px;
+    }
+
+    /* Main Content */
+    .main {
+      margin-left: 240px;
+      padding: 40px 20px;
+      flex: 1;
+      transition: 0.3s;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      max-width: 180px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, var(--c4), var(--c2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto 20px auto;
+      color: #d1d1d1;
+    }
+
+    .hero .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: var(--c2);
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .hero .btn:hover {
+      background: var(--c1);
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #121212;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card h3 {
+      padding: 10px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        left: -240px;
+      }
+      .sidebar.active {
+        left: 0;
+      }
+      .main {
+        margin-left: 0;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <button class="menu-toggle">☰</button>
+  <div class="sidebar">
+    <h2>SyammStoreID</h2>
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="tfo.html">Thanks For Order</a></li>
+      <li><a href="https://whatsapp.com/channel/0029VbBTefC3gvWjFQU6Ew0g" target="_blank">Contact</a></li>
+      <li><a href="media.html">Media Sosial</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="logo">
+      <img src="logo.png" alt="Logo SyammStoreID">
+    </div>
+
+    <div class="hero">
+      <h1>Welcome to SyammStoreID</h1>
+      <p>Store skin Minecraft dengan desain eksklusif & kualitas premium.  
+         Dapatkan skin original, unik, dan cocok buat gaya kalian di game!</p>
+      <a href="#tfo" class="btn">Lihat Koleksi</a>
+    </div>
+
+    <div class="gallery">
+      <div class="card">
+        <img src="skin1.png" alt="Skin 1">
+        <h3>Skin 1</h3>
+      </div>
+      <div class="card">
+        <img src="skin2.png" alt="Skin 2">
+        <h3>Skin 2</h3>
+      </div>
+      <div class="card">
+        <img src="skin3.png" alt="Skin 3">
+        <h3>Skin 3</h3>
+      </div>
+    </div>
+    <!-- Tambahan teks sesuai permintaan -->
+    <div style="margin-top:32px; background:#181828; border-radius:10px; padding:24px; max-width:600px; margin-left:auto; margin-right:auto; color:#fff;">
+      <h2 style="font-size:1.3em; margin-bottom:12px;">⚡ SyammStore_ID ⚡<br>🌟 Skin Minecraft Custom & Original</h2>
+      <p style="margin-bottom:10px;">
+        <strong>📖 Tentang Kami</strong><br>
+        SyammStore_ID hadir buat kalian yang mau tampil beda di Minecraft.<br>
+        Semua skin dibuat dengan detail, sesuai request, dan pastinya unik ✨
+      </p>
+      <p style="margin-bottom:10px;">
+        <strong>🎨 Katalog Layanan</strong><br>
+        Custom Skin Minecraft 🎭<br>
+        💰 Rp 10.000 - Rp 15.000<br><br>
+        Skin Couple (2 Skin) 💕<br>
+        💰 Rp 15.000 - Rp 20.000<br><br>
+        Remake / Reshade Skin 🎨<br>
+        💰 Rp 10.000 - Rp 15.000
+      </p>
+      <p style="margin-bottom:10px;">
+        <strong>💳 Pembayaran</strong><br>
+        ✔ Dana<br>
+        ✔ Gopay
+      </p>
+      <p style="margin-bottom:10px;">
+        <strong>📌 Catatan Penting</strong><br>
+        🔸 Order dikerjakan sesuai antrian<br>
+        🔸 Spam chat = proses makin lama<br>
+        🔸 Tidak ada refund jika skin sudah jadi
+      </p>
+      <p>
+        <strong>🕐 Oprasional</strong><br>
+        🕗 8:00 AM - 🕙 22:00 PM
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
