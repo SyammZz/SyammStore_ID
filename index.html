@@ -177,15 +177,28 @@
     @media (max-width: 768px) {
       .sidebar {
         left: -240px;
+        z-index: 1000;
       }
       .sidebar.active {
         left: 0;
       }
-      .main {
-        margin-left: 0;
+
+      /* saat sidebar aktif, geser main supaya tidak tertutup */
+      .sidebar.active ~ .main {
+        margin-left: 240px;
       }
+
+      /* pindahkan tombol toggle ke kanan agar tidak menutupi judul sidebar */
       .menu-toggle {
         display: block;
+        left: auto;
+        right: 15px;
+        z-index: 1100;
+      }
+
+      .main {
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
       }
     }
   </style>
